@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "FSD Templates Dev",
+  "version": "1.2.1",
+  "description": "Development version of FSD Templates - Inserts prewritten text into textboxes",
+  "permissions": ["activeTab", "storage", "tabs", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Open the extension popup"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "manageTemplates.html",
+    "open_in_tab": true
+  }
+}

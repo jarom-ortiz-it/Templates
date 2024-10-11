@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { width: 300px; padding: 10px; }
+        select, input, button { margin-bottom: 10px; width: 100%; }
+        #previewArea { 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            margin-bottom: 10px; 
+            max-height: 100px; 
+            overflow-y: auto; 
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <select id="categorySelect">
+        <option value="">Select a Template</option>
+    </select>
+    <input type="date" id="datePicker">
+    <div id="previewArea"></div>
+    <button id="insertButton">Insert Text</button>
+    <a href="#" id="manageTemplates">Manage Templates</a>
+    <script src="popup.js"></script>
+</body>
+</html>

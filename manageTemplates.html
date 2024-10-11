@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Templates</title>
+    <style>
+        /* Add your existing styles here */
+        .placeholder-buttons {
+            margin-bottom: 10px;
+        }
+        .placeholder-button {
+            margin-right: 5px;
+        }
+        .import-export-buttons {
+            margin-top: 20px;
+        }
+        .insertion-options {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manage Templates</h1>
+
+    <div>
+        <h2>Global Settings</h2>
+        <div class="insertion-options">
+            <label>Default Insertion Option:</label>
+            <select id="defaultInsertionOption">
+                <option value="above">Insert Above</option>
+                <option value="below">Insert Below</option>
+                <option value="inline">Insert Inline</option>
+            </select>
+        </div>
+    </div>
+    
+
+    <div>
+        <h2>Add/Edit Template</h2>
+        <input type="text" id="categoryName" placeholder="Category Name">
+        <div class="placeholder-buttons">
+            <button class="placeholder-button" data-placeholder="{date}">Add Date</button>
+            <button class="placeholder-button" data-placeholder="{newline}">Add New Line</button>
+            <button class="placeholder-button" data-placeholder="{cursor}">Add Cursor Position</button>
+        </div>
+        <textarea id="templateText" rows="4" cols="50" placeholder="Template Text"></textarea>
+        <div class="insertion-options">
+            <label>Template Insertion Option:</label>
+            <select id="templateInsertionOption">
+                <option value="default">Use Default</option>
+                <option value="above">Insert Above</option>
+                <option value="below">Insert Below</option>
+                <option value="inline">Insert Inline</option>
+            </select>
+        </div>
+        <button id="saveTemplate">Save Template</button>
+    </div>
+
+    <div id="templateList"></div>
+
+
+    <div class="import-export-buttons">
+        <button id="exportTemplates">Export Templates</button>
+        <input type="file" id="importTemplates" accept=".json" style="display: none;">
+        <button id="importButton">Import Templates</button>
+    </div>
+
+    <script src="manageTemplates.js"></script>
+</body>
+</html>
